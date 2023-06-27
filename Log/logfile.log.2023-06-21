@@ -1,0 +1,301 @@
+2023-06-21 11:36:36,055  INFO - START
+2023-06-21 11:36:38,386  INFO - FINISH
+2023-06-21 11:52:22,314  INFO - START
+2023-06-21 11:52:24,131 ERROR - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'db_accurate.tb_item_list' doesn't exist
+java.lang.RuntimeException: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'db_accurate.tb_item_list' doesn't exist
+	at Sync.item_list(Sync.java:315)
+	at Main.main(Main.java:42)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'db_accurate.tb_item_list' doesn't exist
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3976)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3912)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2486)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)
+	at Sync.item_list(Sync.java:308)
+	... 1 more
+2023-06-21 11:53:39,756  INFO - START
+2023-06-21 11:53:41,595 ERROR - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'name' in 'field list'
+java.lang.RuntimeException: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'name' in 'field list'
+	at Sync.item_list(Sync.java:315)
+	at Main.main(Main.java:42)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'name' in 'field list'
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3976)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3912)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2486)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)
+	at Sync.item_list(Sync.java:308)
+	... 1 more
+2023-06-21 11:54:01,898  INFO - START
+2023-06-21 11:54:03,526 ERROR - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'no' in 'field list'
+java.lang.RuntimeException: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'no' in 'field list'
+	at Sync.item_list(Sync.java:315)
+	at Main.main(Main.java:42)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'no' in 'field list'
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3976)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3912)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2486)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2079)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2013)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5104)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1998)
+	at Sync.item_list(Sync.java:308)
+	... 1 more
+2023-06-21 11:56:12,163  INFO - START
+2023-06-21 11:56:13,921  INFO - FINISH
+2023-06-21 11:58:36,405  INFO - START
+2023-06-21 11:58:38,197  INFO - FINISH
+2023-06-21 12:00:07,544  INFO - START
+2023-06-21 12:00:09,427  INFO - FINISH
+2023-06-21 13:25:53,454  INFO - START
+2023-06-21 13:26:23,277  INFO - START
+2023-06-21 13:29:44,116  INFO - START
+2023-06-21 13:33:12,663  INFO - START
+2023-06-21 13:36:25,948  INFO - START
+2023-06-21 13:39:41,397  INFO - START
+2023-06-21 13:40:57,610  INFO - START
+2023-06-21 13:42:31,815  INFO - START
+2023-06-21 13:43:28,289  INFO - START
+2023-06-21 13:44:08,799  INFO - FINISH
+2023-06-21 13:58:20,191  INFO - START
+2023-06-21 13:58:38,331 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:337)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getLong(JSONObject.java:800)
+	at Sync.item_list(Sync.java:302)
+	... 1 more
+2023-06-21 13:59:46,549  INFO - START
+2023-06-21 13:59:48,798 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:337)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getLong(JSONObject.java:800)
+	at Sync.item_list(Sync.java:302)
+	... 1 more
+2023-06-21 14:00:27,155  INFO - START
+2023-06-21 14:00:30,331 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:337)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getLong(JSONObject.java:800)
+	at Sync.item_list(Sync.java:302)
+	... 1 more
+2023-06-21 14:03:00,788  INFO - START
+2023-06-21 14:03:03,106 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:337)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getString(JSONObject.java:859)
+	at Sync.item_list(Sync.java:302)
+	... 1 more
+2023-06-21 14:06:01,521  INFO - START
+2023-06-21 14:06:04,598 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:338)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getString(JSONObject.java:859)
+	at Sync.item_list(Sync.java:303)
+	... 1 more
+2023-06-21 14:06:42,175  INFO - START
+2023-06-21 14:06:44,501 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:338)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getString(JSONObject.java:859)
+	at Sync.item_list(Sync.java:303)
+	... 1 more
+2023-06-21 14:07:50,729  INFO - START
+2023-06-21 14:07:55,116 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:338)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getString(JSONObject.java:859)
+	at Sync.item_list(Sync.java:303)
+	... 1 more
+2023-06-21 14:09:12,996  INFO - START
+2023-06-21 14:09:15,753 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:339)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getString(JSONObject.java:859)
+	at Sync.item_list(Sync.java:303)
+	... 1 more
+2023-06-21 14:12:13,946  INFO - START
+2023-06-21 14:12:16,202 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:340)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getLong(JSONObject.java:800)
+	at Sync.item_list(Sync.java:303)
+	... 1 more
+2023-06-21 14:13:04,091  INFO - START
+2023-06-21 14:13:05,526 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:340)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getLong(JSONObject.java:800)
+	at Sync.item_list(Sync.java:303)
+	... 1 more
+2023-06-21 14:14:42,287  INFO - START
+2023-06-21 14:14:43,738 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:340)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getLong(JSONObject.java:800)
+	at Sync.item_list(Sync.java:303)
+	... 1 more
+2023-06-21 14:15:39,009  INFO - START
+2023-06-21 14:15:40,808 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:340)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getString(JSONObject.java:859)
+	at Sync.item_list(Sync.java:303)
+	... 1 more
+2023-06-21 14:15:56,485  INFO - START
+2023-06-21 14:16:46,511  INFO - START
+2023-06-21 14:16:47,946 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:340)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getLong(JSONObject.java:800)
+	at Sync.item_list(Sync.java:303)
+	... 1 more
+2023-06-21 14:17:01,592  INFO - START
+2023-06-21 14:18:51,248  INFO - START
+2023-06-21 14:18:52,824 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:340)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getLong(JSONObject.java:800)
+	at Sync.item_list(Sync.java:303)
+	... 1 more
+2023-06-21 14:19:35,597  INFO - START
+2023-06-21 14:19:43,934 ERROR - org.json.JSONException: JSONObject["availableToSell"] not found.
+java.lang.RuntimeException: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at Sync.item_list(Sync.java:340)
+	at Main.main(Main.java:42)
+Caused by: org.json.JSONException: JSONObject["availableToSell"] not found.
+	at org.json.JSONObject.get(JSONObject.java:572)
+	at org.json.JSONObject.getLong(JSONObject.java:800)
+	at Sync.item_list(Sync.java:303)
+	... 1 more
+2023-06-21 14:20:44,115  INFO - START
+2023-06-21 14:21:45,605  INFO - START
+2023-06-21 14:25:13,515  INFO - START
+2023-06-21 14:26:12,439  INFO - START
+2023-06-21 14:27:44,268  INFO - START
+2023-06-21 14:28:13,437  INFO - START
+2023-06-21 14:29:21,008  INFO - START
+2023-06-21 14:29:44,606  INFO - START
+2023-06-21 14:30:16,790  INFO - START
+2023-06-21 14:30:41,146  INFO - START
+2023-06-21 14:33:47,106  INFO - START
+2023-06-21 14:36:41,601  INFO - START
+2023-06-21 14:38:01,758  INFO - START
+2023-06-21 14:39:17,419  INFO - START
+2023-06-21 14:41:52,051  INFO - START
+2023-06-21 14:45:21,374  INFO - START
+2023-06-21 14:46:01,789  INFO - FINISH
+2023-06-21 14:46:53,712  INFO - START
+2023-06-21 14:47:50,759  INFO - START
+2023-06-21 14:48:37,519  INFO - FINISH
+2023-06-21 14:54:15,609  INFO - START
+2023-06-21 14:54:17,762 ERROR - java.sql.SQLException: Parameter index out of range (7 > number of parameters, which is 6).
+java.lang.RuntimeException: java.sql.SQLException: Parameter index out of range (7 > number of parameters, which is 6).
+	at Sync.item_list(Sync.java:342)
+	at Main.main(Main.java:42)
+Caused by: java.sql.SQLException: Parameter index out of range (7 > number of parameters, which is 6).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:898)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:887)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:861)
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3327)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3312)
+	at com.mysql.jdbc.PreparedStatement.setString(PreparedStatement.java:4027)
+	at Sync.item_list(Sync.java:318)
+	... 1 more
+2023-06-21 14:54:40,559  INFO - START
+2023-06-21 14:58:17,129  INFO - START
+2023-06-21 14:59:45,332  INFO - START
+2023-06-21 15:00:34,300  INFO - START
+2023-06-21 15:15:36,781  INFO - FINISH
+2023-06-21 15:19:44,448  INFO - START
+2023-06-21 15:19:48,651  INFO - START
+2023-06-21 15:20:51,795  INFO - START
+2023-06-21 15:22:00,765  INFO - START
+2023-06-21 15:32:35,924  INFO - FINISH
+2023-06-21 15:42:48,966  INFO - START
+2023-06-21 15:45:08,447  INFO - START
+2023-06-21 15:47:47,783  INFO - START
+2023-06-21 15:49:19,997  INFO - START
+2023-06-21 15:50:02,224  INFO - START
+2023-06-21 15:51:00,690  INFO - START
+2023-06-21 15:52:17,339  INFO - START
+2023-06-21 16:02:41,489  INFO - FINISH

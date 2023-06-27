@@ -1,0 +1,140 @@
+2022-08-08 18:05:02,907  INFO - START
+2022-08-08 18:05:07,580  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"907047819408030409","userCode":"10220808414312"}],"success":true,"message":""}
+2022-08-08 18:05:07,581  INFO - All Member - Send Coupon to Member Code : 10220808414312 and Member Mobile : 85641822103
+2022-08-08 18:05:07,704  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"702447812608030403","userCode":"10220808414302"}],"success":true,"message":""}
+2022-08-08 18:05:07,704  INFO - All Member - Send Coupon to Member Code : 10220808414302 and Member Mobile : 82113106588
+2022-08-08 18:05:07,794  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"305047817708030403","userCode":"10220808414296"}],"success":true,"message":""}
+2022-08-08 18:05:07,803  INFO - All Member - Send Coupon to Member Code : 10220808414296 and Member Mobile : 8817505099
+2022-08-08 18:05:07,864  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"407247819708030409","userCode":"10220808414288"}],"success":true,"message":""}
+2022-08-08 18:05:07,865  INFO - All Member - Send Coupon to Member Code : 10220808414288 and Member Mobile : 881026717576
+2022-08-08 18:05:07,934  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"901747817808030405","userCode":"10220808414279"}],"success":true,"message":""}
+2022-08-08 18:05:07,934  INFO - All Member - Send Coupon to Member Code : 10220808414279 and Member Mobile : 81380416415
+2022-08-08 18:05:08,006  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"901247811908030403","userCode":"10220808414257"}],"success":true,"message":""}
+2022-08-08 18:05:08,006  INFO - All Member - Send Coupon to Member Code : 10220808414257 and Member Mobile : 82144079228
+2022-08-08 18:05:08,095  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"507447815009030401","userCode":"10220808414254"}],"success":true,"message":""}
+2022-08-08 18:05:08,095  INFO - All Member - Send Coupon to Member Code : 10220808414254 and Member Mobile : 81283848454
+2022-08-08 18:05:08,164  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"901247818009030409","userCode":"10220808414251"}],"success":true,"message":""}
+2022-08-08 18:05:08,165  INFO - All Member - Send Coupon to Member Code : 10220808414251 and Member Mobile : 81284950756
+2022-08-08 18:05:08,224  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"204247816109030405","userCode":"10220808414252"}],"success":true,"message":""}
+2022-08-08 18:05:08,224  INFO - All Member - Send Coupon to Member Code : 10220808414252 and Member Mobile : 87887586087
+2022-08-08 18:05:08,284  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"805347812209030401","userCode":"10220808414229"}],"success":true,"message":""}
+2022-08-08 18:05:08,284  INFO - All Member - Send Coupon to Member Code : 10220808414229 and Member Mobile : 81283258096
+2022-08-08 18:05:08,393  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"305147814309030402","userCode":"10220808414189"}],"success":true,"message":""}
+2022-08-08 18:05:08,394  INFO - All Member - Send Coupon to Member Code : 10220808414189 and Member Mobile : 85796342778
+2022-08-08 18:05:08,494  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"706447810309030409","userCode":"10220808414179"}],"success":true,"message":""}
+2022-08-08 18:05:08,494  INFO - All Member - Send Coupon to Member Code : 10220808414179 and Member Mobile : 85931223619
+2022-08-08 18:05:08,834  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"602247819409030409","userCode":"10220808414143"}],"success":true,"message":""}
+2022-08-08 18:05:08,834  INFO - All Member - Send Coupon to Member Code : 10220808414143 and Member Mobile : 81370605558
+2022-08-08 18:05:08,934  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"805147810809030404","userCode":"10220808414129"}],"success":true,"message":""}
+2022-08-08 18:05:08,935  INFO - All Member - Send Coupon to Member Code : 10220808414129 and Member Mobile : 88299108204
+2022-08-08 18:05:09,023  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"305947813909030403","userCode":"10220808414090"}],"success":true,"message":""}
+2022-08-08 18:05:09,024  INFO - All Member - Send Coupon to Member Code : 10220808414090 and Member Mobile : 88296945719
+2022-08-08 18:05:09,285  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"609147814000031401","userCode":"10220808414081"}],"success":true,"message":""}
+2022-08-08 18:05:09,285  INFO - All Member - Send Coupon to Member Code : 10220808414081 and Member Mobile : 87893030997
+2022-08-08 18:05:09,423  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"508847813300031401","userCode":"10220808414049"}],"success":true,"message":""}
+2022-08-08 18:05:09,424  INFO - All Member - Send Coupon to Member Code : 10220808414049 and Member Mobile : 85715501896
+2022-08-08 18:05:09,494  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"606247816400031401","userCode":"10220808414027"}],"success":true,"message":""}
+2022-08-08 18:05:09,494  INFO - All Member - Send Coupon to Member Code : 10220808414027 and Member Mobile : 881024182297
+2022-08-08 18:05:09,696  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"109447814400031409","userCode":"10220808413901"}],"success":true,"message":""}
+2022-08-08 18:05:09,696  INFO - All Member - Send Coupon to Member Code : 10220808413901 and Member Mobile : 82118868559
+2022-08-08 18:05:09,914  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"700047818700031403","userCode":"10220808413876"}],"success":true,"message":""}
+2022-08-08 18:05:09,914  INFO - All Member - Send Coupon to Member Code : 10220808413876 and Member Mobile : 82264990182
+2022-08-08 18:05:10,014  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"206847812900031402","userCode":"10220808413788"}],"success":true,"message":""}
+2022-08-08 18:05:10,014  INFO - All Member - Send Coupon to Member Code : 10220808413788 and Member Mobile : 85700077719
+2022-08-08 18:05:10,154  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"800447812001031401","userCode":"10220808413774"}],"success":true,"message":""}
+2022-08-08 18:05:10,154  INFO - All Member - Send Coupon to Member Code : 10220808413774 and Member Mobile : 85162952193
+2022-08-08 18:05:10,224  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"603247818101031405","userCode":"10220808413745"}],"success":true,"message":""}
+2022-08-08 18:05:10,224  INFO - All Member - Send Coupon to Member Code : 10220808413745 and Member Mobile : 82110141431
+2022-08-08 18:05:10,284  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"604247810201031402","userCode":"10220808413746"}],"success":true,"message":""}
+2022-08-08 18:05:10,284  INFO - All Member - Send Coupon to Member Code : 10220808413746 and Member Mobile : 89619049090
+2022-08-08 18:05:10,434  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"803047813301031402","userCode":"10220808413721"}],"success":true,"message":""}
+2022-08-08 18:05:10,434  INFO - All Member - Send Coupon to Member Code : 10220808413721 and Member Mobile : 83877193491
+2022-08-08 18:05:10,503  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"805447813401031403","userCode":"10220808413703"}],"success":true,"message":""}
+2022-08-08 18:05:10,504  INFO - All Member - Send Coupon to Member Code : 10220808413703 and Member Mobile : 81363228215
+2022-08-08 18:05:10,664  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"903147817401031409","userCode":"10220808413683"}],"success":true,"message":""}
+2022-08-08 18:05:10,664  INFO - All Member - Send Coupon to Member Code : 10220808413683 and Member Mobile : 87876613366
+2022-08-08 18:05:10,793  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"206347818601031405","userCode":"10220808413671"}],"success":true,"message":""}
+2022-08-08 18:05:10,793  INFO - All Member - Send Coupon to Member Code : 10220808413671 and Member Mobile : 82111744598
+2022-08-08 18:05:10,874  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"206247811701031409","userCode":"10220808413667"}],"success":true,"message":""}
+2022-08-08 18:05:10,874  INFO - All Member - Send Coupon to Member Code : 10220808413667 and Member Mobile : 85157635766
+2022-08-08 18:05:10,974  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"803447814801031407","userCode":"10220808413647"}],"success":true,"message":""}
+2022-08-08 18:05:10,974  INFO - All Member - Send Coupon to Member Code : 10220808413647 and Member Mobile : 87759900096
+2022-08-08 18:05:11,054  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"707547819901031407","userCode":"10220808413470"}],"success":true,"message":""}
+2022-08-08 18:05:11,054  INFO - All Member - Send Coupon to Member Code : 10220808413470 and Member Mobile : 83150721212
+2022-08-08 18:05:11,254  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"808347818002031405","userCode":"10220808413428"}],"success":true,"message":""}
+2022-08-08 18:05:11,254  INFO - All Member - Send Coupon to Member Code : 10220808413428 and Member Mobile : 812481648648
+2022-08-08 18:05:11,524  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"308347816202031405","userCode":"10220808413316"}],"success":true,"message":""}
+2022-08-08 18:05:11,524  INFO - All Member - Send Coupon to Member Code : 10220808413316 and Member Mobile : 81212824916
+2022-08-08 18:05:11,621  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"105247815502031401","userCode":"10220808413198"}],"success":true,"message":""}
+2022-08-08 18:05:11,621  INFO - All Member - Send Coupon to Member Code : 10220808413198 and Member Mobile : 85773088273
+2022-08-08 18:05:11,854  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"805147818602031403","userCode":"10220808413015"}],"success":true,"message":""}
+2022-08-08 18:05:11,854  INFO - All Member - Send Coupon to Member Code : 10220808413015 and Member Mobile : 82339433475
+2022-08-08 18:05:12,104  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"904147817802031405","userCode":"10220808412974"}],"success":true,"message":""}
+2022-08-08 18:05:12,104  INFO - All Member - Send Coupon to Member Code : 10220808412974 and Member Mobile : 82110023202
+2022-08-08 18:05:12,204  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"405247813003031409","userCode":"10220808412967"}],"success":true,"message":""}
+2022-08-08 18:05:12,204  INFO - All Member - Send Coupon to Member Code : 10220808412967 and Member Mobile : 82110023446
+2022-08-08 18:05:12,274  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"803247811103031409","userCode":"10220808412958"}],"success":true,"message":""}
+2022-08-08 18:05:12,274  INFO - All Member - Send Coupon to Member Code : 10220808412958 and Member Mobile : 882005709007
+2022-08-08 18:05:12,404  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"805147810303031402","userCode":"10220808412951"}],"success":true,"message":""}
+2022-08-08 18:05:12,404  INFO - All Member - Send Coupon to Member Code : 10220808412951 and Member Mobile : 81216483920
+2022-08-08 18:05:12,464  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"508647813303031409","userCode":"10220808412948"}],"success":true,"message":""}
+2022-08-08 18:05:12,464  INFO - All Member - Send Coupon to Member Code : 10220808412948 and Member Mobile : 82110014775
+2022-08-08 18:05:12,614  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"206447815403031405","userCode":"10220808412923"}],"success":true,"message":""}
+2022-08-08 18:05:12,614  INFO - All Member - Send Coupon to Member Code : 10220808412923 and Member Mobile : 82110023264
+2022-08-08 18:05:12,864  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"903847816603031402","userCode":"10220808412805"}],"success":true,"message":""}
+2022-08-08 18:05:12,864  INFO - All Member - Send Coupon to Member Code : 10220808412805 and Member Mobile : 81296785233
+2022-08-08 18:05:12,923  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"904347818803031405","userCode":"10220808412782"}],"success":true,"message":""}
+2022-08-08 18:05:12,924  INFO - All Member - Send Coupon to Member Code : 10220808412782 and Member Mobile : 85799108887
+2022-08-08 18:05:13,014  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"805347818903031401","userCode":"10220808412774"}],"success":true,"message":""}
+2022-08-08 18:05:13,014  INFO - All Member - Send Coupon to Member Code : 10220808412774 and Member Mobile : 81515446005
+2022-08-08 18:05:13,134  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"308447819004031401","userCode":"10220808412700"}],"success":true,"message":""}
+2022-08-08 18:05:13,134  INFO - All Member - Send Coupon to Member Code : 10220808412700 and Member Mobile : 8977334916
+2022-08-08 18:05:13,253  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"205047811104031404","userCode":"10220808412696"}],"success":true,"message":""}
+2022-08-08 18:05:13,253  INFO - All Member - Send Coupon to Member Code : 10220808412696 and Member Mobile : 89688382284
+2022-08-08 18:05:13,253  INFO - FINISH
+2022-08-08 18:15:39,028  INFO - START
+2022-08-08 18:15:42,661  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"308943817503034407","userCode":"10220808414641"}],"success":true,"message":""}
+2022-08-08 18:15:42,661  INFO - All Member - Send Coupon to Member Code : 10220808414641 and Member Mobile : 8977333350
+2022-08-08 18:15:42,732  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"706843818603034405","userCode":"10220808414632"}],"success":true,"message":""}
+2022-08-08 18:15:42,732  INFO - All Member - Send Coupon to Member Code : 10220808414632 and Member Mobile : 85781682613
+2022-08-08 18:15:42,792  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"208643819703034401","userCode":"10220808414590"}],"success":true,"message":""}
+2022-08-08 18:15:42,793  INFO - All Member - Send Coupon to Member Code : 10220808414590 and Member Mobile : 81295032337
+2022-08-08 18:15:42,861  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"404643817703034408","userCode":"10220808414566"}],"success":true,"message":""}
+2022-08-08 18:15:42,861  INFO - All Member - Send Coupon to Member Code : 10220808414566 and Member Mobile : 82144009002
+2022-08-08 18:15:42,931  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"800443815803034406","userCode":"10220808414517"}],"success":true,"message":""}
+2022-08-08 18:15:42,931  INFO - All Member - Send Coupon to Member Code : 10220808414517 and Member Mobile : 81329706699
+2022-08-08 18:15:43,042  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"905743815903034401","userCode":"10220808414500"}],"success":true,"message":""}
+2022-08-08 18:15:43,042  INFO - All Member - Send Coupon to Member Code : 10220808414500 and Member Mobile : 85778776756
+2022-08-08 18:15:43,091  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"106843815004034401","userCode":"10220808414493"}],"success":true,"message":""}
+2022-08-08 18:15:43,091  INFO - All Member - Send Coupon to Member Code : 10220808414493 and Member Mobile : 85693300359
+2022-08-08 18:15:43,201  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"302243815004034409","userCode":"10220808414460"}],"success":true,"message":""}
+2022-08-08 18:15:43,202  INFO - All Member - Send Coupon to Member Code : 10220808414460 and Member Mobile : 83826344470
+2022-08-08 18:15:43,271  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"201643815104034409","userCode":"10220808414430"}],"success":true,"message":""}
+2022-08-08 18:15:43,271  INFO - All Member - Send Coupon to Member Code : 10220808414430 and Member Mobile : 87765644147
+2022-08-08 18:15:43,362  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"209743819204034408","userCode":"10220808414409"}],"success":true,"message":""}
+2022-08-08 18:15:43,362  INFO - All Member - Send Coupon to Member Code : 10220808414409 and Member Mobile : 85974382462
+2022-08-08 18:15:43,432  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"103843815304034405","userCode":"10220808414378"}],"success":true,"message":""}
+2022-08-08 18:15:43,432  INFO - All Member - Send Coupon to Member Code : 10220808414378 and Member Mobile : 81390613377
+2022-08-08 18:15:43,491  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"101843814404034401","userCode":"10220808414375"}],"success":true,"message":""}
+2022-08-08 18:15:43,491  INFO - All Member - Send Coupon to Member Code : 10220808414375 and Member Mobile : 88991300094
+2022-08-08 18:15:43,551  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"701843812404034407","userCode":"10220808414368"}],"success":true,"message":""}
+2022-08-08 18:15:43,551  INFO - All Member - Send Coupon to Member Code : 10220808414368 and Member Mobile : 88295817538
+2022-08-08 18:15:43,620  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"204743810504034403","userCode":"10220808414361"}],"success":true,"message":""}
+2022-08-08 18:15:43,620  INFO - All Member - Send Coupon to Member Code : 10220808414361 and Member Mobile : 81284950996
+2022-08-08 18:15:43,701  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"705743813604034401","userCode":"10220808414352"}],"success":true,"message":""}
+2022-08-08 18:15:43,701  INFO - All Member - Send Coupon to Member Code : 10220808414352 and Member Mobile : 8882257500
+2022-08-08 18:15:43,751  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"203843810604034407","userCode":"10220808414350"}],"success":true,"message":""}
+2022-08-08 18:15:43,751  INFO - All Member - Send Coupon to Member Code : 10220808414350 and Member Mobile : 8816158395
+2022-08-08 18:15:43,820  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"801743818704034403","userCode":"10220808414340"}],"success":true,"message":""}
+2022-08-08 18:15:43,821  INFO - All Member - Send Coupon to Member Code : 10220808414340 and Member Mobile : 8817505192
+2022-08-08 18:15:43,892  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"604743810804034401","userCode":"10220808414332"}],"success":true,"message":""}
+2022-08-08 18:15:43,892  INFO - All Member - Send Coupon to Member Code : 10220808414332 and Member Mobile : 88297552182
+2022-08-08 18:15:43,951  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"707843812804034407","userCode":"10220808414323"}],"success":true,"message":""}
+2022-08-08 18:15:43,951  INFO - All Member - Send Coupon to Member Code : 10220808414323 and Member Mobile : 82319666277
+2022-08-08 18:15:44,041  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"304743813904034403","userCode":"10220808414319"}],"success":true,"message":""}
+2022-08-08 18:15:44,041  INFO - All Member - Send Coupon to Member Code : 10220808414319 and Member Mobile : 81254854698
+2022-08-08 18:15:44,091  INFO - Response: {"code":"0","data":[{"code":"0","success":true,"couponCode":"604743813005034401","userCode":"10220808414317"}],"success":true,"message":""}
+2022-08-08 18:15:44,091  INFO - All Member - Send Coupon to Member Code : 10220808414317 and Member Mobile : 88297671089
+2022-08-08 18:15:44,092  INFO - FINISH
+2022-08-08 18:21:12,876  INFO - START
+2022-08-08 18:21:18,920  INFO - FINISH

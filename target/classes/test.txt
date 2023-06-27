@@ -1,0 +1,326 @@
+import org.apache.http.Header;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.util.EntityUtils;
+import org.apache.log4j.Logger;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+
+
+
+
+import java.sql.ResultSet;
+import java.time.LocalDate;
+
+public class Sync {
+
+    private static final org.apache.log4j.Logger log = Logger.getLogger(Main.class);
+
+    public static String BaseUrl = "https://speedwork.id.gtech.asia/graphql";
+
+    public static void register_GrabMember (String start, String end)throws Exception{
+
+        DBConnect db = new DBConnect();
+        db.id_idm_db_connect();
+
+        String SQLgetMember = "Select * from idm_user_account where source = 'GRAB'  and create_time between '"+ start +"' and '"+ end +"'";
+        ResultSet rsMember = db.id_idm_db_getstatement().executeQuery(SQLgetMember) ;
+        while (rsMember.next()){
+
+            String  member_code = rsMember.getString("user_code");
+
+            //log.info(member_code);
+            //(A) 21101358806917199048 1619148580034 Diskon Oli Mobil Rp 90rb
+            //(B) 21101358805295106155 1619148455090 Diskon Spooring Rp 50rb
+            //(C) 20201351073771648351 1618307650816 Diskon 200rb AKI Mobil
+            //(D) 20301339711687113643 1617182080011 Diskon 50% Tune Up & Cabin-AC Cleaner
+            //(E) 21101338060301209538 1617182150122 Diskon Rp 1juta Car Detailing
+            //(F) 21101338056134040455 1617182175731 Diskon Rp 1juta AutoFilm
+
+            //SendCoupon("202001150000042681","21101338047642582527","1617182216746",token());
+
+            for (int i = 1; i <= 4; i++) {
+                SendCoupon(member_code,"21101358806917199048","1619148580034",token()); //4 x (A)
+                SendCoupon(member_code,"20301339711687113643","1617182080011",token()); //4 x (D)
+            }
+
+            for (int i = 1; i <= 2; i++) {
+                SendCoupon(member_code,"20201351073771648351","1618307650816",token()); //2 x (C)
+            }
+            SendCoupon(member_code,"21101358805295106155","1619148455090",token()); //1 x (B)
+            SendCoupon(member_code,"21101338060301209538","1617182150122",token()); //1 x (E)
+            SendCoupon(member_code,"21101338056134040455","1617182175731",token()); //1 x (F)
+
+
+            log.info("Grab Member - Send Coupon to Member Code : " + member_code);
+
+        }
+
+        rsMember.close();
+        db.id_idm_db_closeconnection();
+
+
+    }
+
+    public static void register_AllMember (String start, String end)throws Exception{
+
+        //GET NEW MEMBER
+        String payloadMember = "{\"query\": \"query queryMemberProfileList{queryMemberProfileList(input:{registerDateFrom:\\\""+start+"\\\"registerDateTo:\\\""+end+"\\\"}, pageInput:{pageNum:1,pageSize:100}){edges {node {memberCode } } }}\"}";
+        StringEntity entityMember = new StringEntity(payloadMember,
+                ContentType.APPLICATION_JSON);
+        HttpClient httpClientMember =  HttpClientBuilder.create().build();
+        HttpPost requestMember = new HttpPost(BaseUrl);
+        requestMember.addHeader("Cookie",token());
+        requestMember.setEntity(entityMember);
+        HttpResponse responseMember = httpClientMember.execute(requestMember);
+        String jsonMember = EntityUtils.toString(responseMember.getEntity());
+
+        JSONObject jsonObj = new JSONObject(jsonMember);
+        JSONArray arr = jsonObj.getJSONObject("data").getJSONObject("queryMemberProfileList").getJSONArray("edges");
+        for (int i = 0; i < arr.length(); i++) {
+            String membercode = arr.getJSONObject(i).optString("node").substring(15);
+            membercode = membercode.substring(0, membercode.length() -2);
+
+            //SEND COUPON
+            SendCoupon(membercode,"21101349980489757162","1618198275072",token()); //Ottoban - Spooring
+            SendCoupon(membercode,"20201315565345892624","1614757018974",token()); //Ottoban - Beli 2 Ban GT
+            SendCoupon(membercode,"20201315564408541836","1614757101202",token()); //Ottoban - Beli 4 Ban GT
+            SendCoupon(membercode,"20201315563582924274","1614757154451",token()); //Ottoban - Balancing x 4
+            SendCoupon(membercode,"21101315562910533525","1614757206883",token()); //Ottoban - Balancing 4 Ban
+
+
+
+            log.info("All Member - Send Coupon to Member Code : " + membercode);
+
+        }
+
+
+    }
+
+    public static void buy_brand_gt (String start, String end)throws Exception{
+        //log.info("Service Xpress Process...");
+        DBConnect db = new DBConnect();
+        db.db_order_connect();
+        //db.finreco_connect();
+
+        String SQLgetMember = "select * From sw_report where order_type = 'online' and " +
+                "order_status = 'completed' and " +
+                "brand_name in('GT Radial','Paket Ban & Velg') and " +
+                "channel_code = 'SPEEDWORK' And " +
+                "store_code in('10200409245','10200409243','1019123501121','10200108032','10200222114','1019123431907','10200629403','10200108038','1019123451512','1019123451513'," +
+                "'10200409242','10200123076','10200108025','10200623379','10200204092','10200123078','10200121074','10200203091','10200205095','10200213099','1020113000659','10200214100'," +
+                "'10200203090','10200121072','10200204094','10200121073','10200108028','10200108027','10200206096','10200108026','1021030501699','10200617369','1019123431706','10200623379','10200624387','10200108037','1021042301901') And " +
+                "end_time between '"+ start +"' and '"+ end + "'";
+
+        ResultSet rsMember = db.db_order_getstatement().executeQuery(SQLgetMember) ;
+        while (rsMember.next()){
+
+            //String  order_number = resultSet_order.getString("order_number");
+            int  quantity = rsMember.getInt("quantity");
+            String brand_name = rsMember.getString("brand_name");
+            String  member_code = rsMember.getString("member_code");
+            //log.info(order_number + " " + quantity );
+
+            //(A) 21101338047642582527 1617182216746 Gratis Tambah Nitrogen
+            //(B) 21101338049601442598 1617182201103 Diskon 50% Spooring
+            //(C) 20301339711687113643 1617182080011 Diskon 50% Tune Up & Cabin-AC Cleaner
+            //(D) 21101338056134040455 1617182175731 Diskon Rp 1juta AutoFilm
+            //(E) 21101338060301209538 1617182150122 Diskon Rp 1juta Car Detailing
+            //(F) 20201351073771648351 1618307650816 Diskon 200rb AKI Mobil
+            //(G) 20201351763070965350 1618376400494 Diskon 100rb OLI Mobil
+            if(brand_name.equals("GT RADIAL") && quantity == 1){
+                //3 x (C), 1 x (D), 1 x (E)
+                for (int i = 1; i <= 3; i++) {
+                    SendCoupon(member_code,"20301339711687113643","1617182080011",token()); //3 x (C)
+                }
+                SendCoupon(member_code,"21101338056134040455","1617182175731",token()); //1 x (D)
+                SendCoupon(member_code,"21101338060301209538","1617182150122",token()); //1 x (E)
+                SendCoupon(member_code,"20201351073771648351","1618307650816",token()); //1 x (F)
+                SendCoupon(member_code,"20201351763070965350","1618376400494",token()); //1 x (G)
+
+            } else if(brand_name.equals("GT RADIAL") && quantity == 2){
+                //6 x (C), 6 x (A), 2 x (D), 2 x (E), 1 x (B)
+                for (int i = 1; i <= 6; i++) {
+                    SendCoupon(member_code,"20301339711687113643","1617182080011",token()); //6 x (C)
+                    SendCoupon(member_code,"21101338047642582527","1617182216746",token()); //6 x (A)
+                }
+                for (int i = 1; i <= 2; i++) {
+                    SendCoupon(member_code,"21101338056134040455","1617182175731",token()); //2 x (D)
+                    SendCoupon(member_code,"21101338060301209538","1617182150122",token()); //2 x (E)
+                    SendCoupon(member_code,"20201351073771648351","1618307650816",token()); //2 x (F)
+                    SendCoupon(member_code,"20201351763070965350","1618376400494",token()); //3 x (G)
+                }
+                SendCoupon(member_code,"21101338049601442598","1617182201103",token()); //1 x (B)
+
+
+            } else if(brand_name.equals("GT RADIAL") && quantity == 3){
+                //9 x (C), 6 x (A), 3 x (D), 3 x (E), 1 x (B)
+                for (int i = 1; i <= 9; i++) {
+                    SendCoupon(member_code,"20301339711687113643","1617182080011",token()); //9 x (C)
+                }
+                for (int i = 1; i <= 6; i++) {
+                    SendCoupon(member_code,"21101338047642582527","1617182216746",token()); //6 x (A)
+                }
+                for (int i = 1; i <= 3; i++) {
+                    SendCoupon(member_code,"21101338056134040455","1617182175731",token()); //3 x (D)
+                    SendCoupon(member_code,"21101338060301209538","1617182150122",token()); //3 x (E)
+                    SendCoupon(member_code,"20201351073771648351","1618307650816",token()); //3 x (F)
+                    SendCoupon(member_code,"20201351763070965350","1618376400494",token()); //3 x (G)
+                }
+                SendCoupon(member_code,"21101338049601442598","1617182201103",token()); //1 x (B)
+
+
+            } else if(brand_name.equals("Paket Ban & Velg") || quantity >= 4){
+                //12 x (C), 12 x (A), 4 x (D), 4 x (E), 2 x (B)
+                for (int i = 1; i <= 12; i++) {
+                    SendCoupon(member_code,"20301339711687113643","1617182080011",token()); //12 x (C)
+                    SendCoupon(member_code,"21101338047642582527","1617182216746",token()); //12 x (A)
+                }
+                for (int i = 1; i <= 4; i++) {
+                    SendCoupon(member_code,"21101338056134040455","1617182175731",token()); //4 x (D)
+                    SendCoupon(member_code,"21101338060301209538","1617182150122",token()); //4 x (E)
+                    SendCoupon(member_code,"20201351073771648351","1618307650816",token()); //4 x (F)
+                    SendCoupon(member_code,"20201351763070965350","1618376400494",token()); //4 x (G)
+                }
+                for (int i = 1; i <= 2; i++) {
+                    SendCoupon(member_code,"21101338049601442598","1617182201103",token()); //2 x (B)
+                }
+
+            }
+
+            log.info("Buy Brand GT - Send Coupon to Member Code : " + member_code);
+
+        }
+
+        rsMember.close();
+        db.db_order_closeconnection();
+
+
+    }
+
+    public static void register_binusian (String start, String end)throws Exception{
+
+        DBConnect db = new DBConnect();
+        db.db_sw_prod_connect();
+
+        String SQLgetMember = "Select * from t_store_relation where register_code = 'SWBinusian' And create_time between '"+ start +"' and '"+ end +"' ";
+        ResultSet rsMember = db.db_sw_prod_getstatement().executeQuery(SQLgetMember) ;
+        while (rsMember.next()){
+
+            String  member_code = rsMember.getString("store_code");
+
+            //(A) 20201392443380431455 1622446335548 Binusian 4W - Ganti Ban min 2 Ban Rp50ribu
+            //(B) 21101392445393147954 1622446366734 Binusian 4W - Isi Nitrogen max 4 Ban Rp20ribu
+            //(C) 21101392448637063207 1622446401390 Binusian 4W - Ganti Oli Rp50ribu
+            //(D) 21101392449362975392 1622446417485 Binusian 4W - Cuci Mobil Rp30ribu
+            //(E) 21101392450311965847 1622446430354 Binusian 4W - Spooring Rp50ribu
+            //(F) 21101392451112553572 1622446441814 Binusian 2W - Ganti Ban Rp20ribu
+            //(G) 21101392451896540610 1622446453728 Binusian 2W - Isi Nitrogen Rp10ribu
+            //(H) 21101392452694671353 1622446465114 Binusian 2W - Ganti Oli Rp10ribu
+
+            SendCoupon(member_code,"20201392443380431455","1622446335548",token()); //(A)
+            SendCoupon(member_code,"21101392445393147954","1622446366734",token()); //(B)
+            SendCoupon(member_code,"21101392448637063207","1622446401390",token()); //(C)
+            SendCoupon(member_code,"21101392449362975392","1622446417485",token()); //(D)
+            SendCoupon(member_code,"21101392450311965847","1622446430354",token()); //(E)
+            SendCoupon(member_code,"21101392451112553572","1622446441814",token()); //(F)
+            SendCoupon(member_code,"21101392451896540610","1622446453728",token()); //(G)
+            SendCoupon(member_code,"21101392452694671353","1622446465114",token()); //(H)
+
+            log.info("BINUS Member - Send Coupon to Member Code : " + member_code);
+
+
+
+        }
+
+        rsMember.close();
+        db.db_sw_prod_closeconnection();
+
+    }
+
+    public static void ottoban_transaction(String start, String end)throws Exception{
+        DBConnect db = new DBConnect();
+        db.db_order_connect();
+
+
+       /* String SQLgetMember = "select * From sw_report where order_type = 'online' and " +
+                "order_status = 'completed' and " +
+                "brand_name in('GT Radial','Paket Ban & Velg') and " +
+                "channel_code = 'SPEEDWORK' And " +
+                "store_code in('10200409245','10200409243','1019123501121','10200108032','10200222114','1019123431907','10200629403','10200108038','1019123451512','1019123451513'," +
+                "'10200409242','10200123076','10200108025','10200623379','10200204092','10200123078','10200121074','10200203091','10200205095','10200213099','1020113000659','10200214100'," +
+                "'10200203090','10200121072','10200204094','10200121073','10200108028','10200108027','10200206096','10200108026','1021030501699','10200617369','1019123431706','10200623379','10200624387','10200108037','1021042301901') And " +
+                "end_time between '"+ start +"' and '"+ end + "'";
+
+        */
+
+        String SQLgetMember = "select sr.order_number, sr.member_code, toa.ACTIVITY_CODE, toa.SPONSORS, sr.order_status, sr.start_time, sr.end_time  from sw_report sr " +
+                "left join t_order_activityinfo toa " +
+                "on sr.order_number = toa.ORDER_CODE " +
+                "where toa.ACTIVITY_TYPE_CODE = '02' and end_time between '"+ start +"' and '"+ end + "'  " +
+                "group by toa.ACTIVITY_CODE ";
+
+        ResultSet rsMember = db.db_order_getstatement().executeQuery(SQLgetMember) ;
+        while (rsMember.next()){
+
+
+            String  member_code = rsMember.getString("member_code");
+            log.info(member_code );
+
+        }
+
+    }
+
+
+
+    public static String token() throws IOException{
+
+        String payload = "{\"query\": \"query loginOperation{loginOperation(identity:{account:\\\"monang\\\"password:\\\"Nanang8@M\\\"}){userCode}}\"}";
+        //String payload = "{\"query\": \"query loginOperation{loginOperation(identity:{account:\\\"yance\\\"password:\\\"yance\\\"}){userCode}}\"}";
+        StringEntity entity = new StringEntity(payload,
+                ContentType.APPLICATION_JSON);
+        HttpClient httpClient = HttpClientBuilder.create().build();
+        HttpPost request = new HttpPost(BaseUrl);
+        request.setEntity(entity);
+        HttpResponse response = httpClient.execute(request);
+        String json = EntityUtils.toString(response.getEntity());
+        //System.out.println(json);
+
+        String _token = null;
+        Header[] headers = response.getHeaders("Set-Cookie");
+        for (Header h : headers) {
+            _token = h.getValue().toString();
+            _token = _token.substring(_token.indexOf("AUTH-TOKEN="));
+            _token = _token.substring(0, _token.indexOf(";"));
+        }
+
+        //System.out.println(_token);
+        return _token;
+
+    }
+
+    public static String SendCoupon(String userCodes, String activityCode, String releaseCode, String Token) throws IOException {
+
+        String payloadSendCoupon = "{\"query\": \"query sendCouponToUsers{sendCouponToUsers(input:{userCodes:\\\""+userCodes+"\\\"qty:'1' activityCode:\\\""+activityCode+"\\\"releaseCode:\\\""+releaseCode+"\\\"}){message code userCode}}\"}";
+        StringEntity entitySendCoupon = new StringEntity(payloadSendCoupon,
+                ContentType.APPLICATION_JSON);
+        HttpClient httpClientSendCoupon =  HttpClientBuilder.create().build();
+        HttpPost requestSendCoupon = new HttpPost(BaseUrl);
+        requestSendCoupon.addHeader("Cookie",Token);
+        requestSendCoupon.setEntity(entitySendCoupon);
+        HttpResponse responseSendCoupon = httpClientSendCoupon.execute(requestSendCoupon);
+        String jsonSendCoupon = EntityUtils.toString(responseSendCoupon.getEntity());
+        //System.out.println(jsonSendCoupon);
+        return jsonSendCoupon;
+
+    }
+}
