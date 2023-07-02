@@ -40,8 +40,8 @@ public class Main {
             //Sync.register_AllMember_V1(timeprevious2, timenow2);
 //            Sync.item_transfer();
 //            Sync.item_list();
-//            Sync.item_list_stock();
             Sync.Warehouse_list();
+//            Sync.item_list_stock();
 
 
 

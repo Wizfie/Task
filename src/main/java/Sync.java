@@ -436,22 +436,21 @@ public class Sync {
 
     }
 
-    public static void item_list_stock() throws Exception {
+    public static void item_list_stock( int idWh) throws Exception {
         DBConnect db = new DBConnect();
         db.local_connect();
         int currentPage = 0;
         boolean isRun = true;
 
-        String sql = "SELECT DISTINCT idWh FROM tb_item_detail ";
-        ResultSet resultSet = db.local_stmt.executeQuery(sql);
-        while (resultSet.next()) {
-            int idWh = resultSet.getInt("idWh");
-            resultList.add(idWh);
-//            resultSet.close();
-        }
-        for (int idWh : resultList) {
-            // Lakukan operasi atau tampilkan nilai idWh
-            isRun = true;
+//        String sql = "SELECT DISTINCT idWh FROM tb_warehouse_list ";
+//        ResultSet resultSet = db.local_stmt.executeQuery(sql);
+//        while (resultSet.next()) {
+//            int idWh = resultSet.getInt("idWh");
+//            resultList.add(idWh);
+////            resultSet.close();
+//        }
+//        for (int idWh : resultList) {
+//            isRun = true;
 
             while (isRun)
                 try {
@@ -536,10 +535,11 @@ public class Sync {
                     }
                 } catch (Exception e) {
                     throw new RuntimeException(e);
-                } finally {
-                    resultSet.next();
                 }
-        }
+//                finally {
+//                    resultSet.next();
+//                }
+//        }
         db.local_closeconnection();
     }
 
@@ -584,30 +584,32 @@ public class Sync {
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject data = jsonArray.optJSONObject(i);
 
-                        int id = data.optInt("id");
+                        int idWh = data.optInt("id");
                         String name = data.optString("name");
                         String pic = data.optString("pic");
                         String description = data.optString("description");
-                        Warehouse_detail(id);
+                        Warehouse_detail(idWh);
+                        item_list_stock(idWh);
+
 
 //                        System.out.println(id + " - " + name + " - " + pic + " - " + description);
 
-                        String checkQuery = "SELECT id FROM tb_warehouse_list WHERE id = ?";
+                        String checkQuery = "SELECT idWh FROM tb_warehouse_list WHERE idWh= ?";
                         PreparedStatement checkStatement = db.local_conn.prepareStatement(checkQuery);
-                        checkStatement.setInt(1, id);
+                        checkStatement.setInt(1, idWh);
                         ResultSet resultSet = checkStatement.executeQuery();
 
                         if (!resultSet.next()) {
-                            String sql = "INSERT INTO tb_warehouse_list (id,name,pic,description) VALUE (?,?,?,?)";
+                            String sql = "INSERT INTO tb_warehouse_list (idWh,name,pic,description) VALUE (?,?,?,?)";
                             PreparedStatement statement = db.local_conn2.prepareStatement(sql);
-                            statement.setInt(1, id);
+                            statement.setInt(1, idWh);
                             statement.setString(2, name);
                             statement.setString(3, pic);
                             statement.setString(4, description);
                             statement.executeUpdate();
                             System.out.println("Insert Wh list");
                         } else {
-                            System.out.println("data sudah ada");
+                            System.out.println("data WH list sudah ada");
                         }
                     }
                     if (jsonArray.length() == 0) {
@@ -631,13 +633,13 @@ public class Sync {
     }
 
 
-    public static void Warehouse_detail(int id) throws Exception {
+    public static void Warehouse_detail(int idWh) throws Exception {
         DBConnect db = new DBConnect();
         db.local_connect();
 
 
             try {
-                URL Warehouse_detail = new URL("https://4fwvbo.pvt1.accurate.id/accurate/api/warehouse/detail.do?id="+ id);
+                URL Warehouse_detail = new URL("https://4fwvbo.pvt1.accurate.id/accurate/api/warehouse/detail.do?id="+ idWh);
                 String read;
                 HttpURLConnection _urlConnection = (HttpURLConnection) Warehouse_detail.openConnection();
                 _urlConnection.setDoOutput(true);
@@ -675,15 +677,15 @@ public class Sync {
 
 //                        System.out.println(id + " - " + name + " - " + pic + " - "+street+ " - "+city+ " - "+province+ " - "+country+" - " + description);
 
-                        String checkQuery = "SELECT id FROM tb_warehouse_detail WHERE id = ?";
+                        String checkQuery = "SELECT idWh FROM tb_warehouse_detail WHERE idWh = ?";
                         PreparedStatement checkStatement = db.local_conn.prepareStatement(checkQuery);
-                        checkStatement.setInt(1, id);
+                        checkStatement.setInt(1, idWh);
                         ResultSet resultSet = checkStatement.executeQuery();
 
                         if (!resultSet.next()) {
-                            String sql = "INSERT INTO tb_warehouse_detail (id,name,pic,street,city,province,country,description) VALUE (?,?,?,?,?,?,?,?)";
+                            String sql = "INSERT INTO tb_warehouse_detail (idWh,name,pic,street,city,province,country,description) VALUE (?,?,?,?,?,?,?,?)";
                             PreparedStatement statement = db.local_conn2.prepareStatement(sql);
-                            statement.setInt(1, id);
+                            statement.setInt(1, idWh);
                             statement.setString(2, name);
                             statement.setString(3, pic);
                             statement.setString(4, street);
@@ -694,7 +696,7 @@ public class Sync {
                             statement.executeUpdate();
                             System.out.println("Insert Wh detail");
                         } else {
-                            System.out.println("data sudah ada");
+                            System.out.println("data WH Detail sudah ada");
                         }
 
                 } else {

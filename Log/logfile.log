@@ -122,3 +122,63 @@ com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 's
 	at Main.main(Main.java:44)
 2023-06-27 10:39:58,240  INFO - START
 2023-06-27 10:40:14,661  INFO - FINISH
+2023-06-30 10:49:34,703  INFO - START
+2023-06-30 10:49:51,480 ERROR - Unknown column 'idWh' in 'field list'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'idWh' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3976)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3912)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2482)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2440)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1381)
+	at Sync.item_list_stock(Sync.java:446)
+	at Main.main(Main.java:44)
+2023-06-30 10:51:15,829  INFO - START
+2023-06-30 10:51:17,671 ERROR - Unknown column 'id' in 'field list'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'id' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3976)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3912)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2486)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1966)
+	at Sync.Warehouse_list(Sync.java:597)
+	at Main.main(Main.java:43)
+2023-06-30 10:54:30,145  INFO - START
+2023-06-30 10:54:31,648 ERROR - org.json.JSONArray incompatible with org.json.JSONObject
+java.lang.ClassCastException: org.json.JSONArray incompatible with org.json.JSONObject
+	at Sync.Warehouse_detail(Sync.java:664)
+	at Sync.Warehouse_list(Sync.java:590)
+	at Main.main(Main.java:43)
+2023-06-30 11:08:32,980  INFO - START
+2023-06-30 11:08:37,333 ERROR - org.json.JSONArray incompatible with org.json.JSONObject
+java.lang.ClassCastException: org.json.JSONArray incompatible with org.json.JSONObject
+	at Sync.Warehouse_detail(Sync.java:664)
+	at Sync.Warehouse_list(Sync.java:590)
+	at Main.main(Main.java:43)
+2023-06-30 11:10:27,239  INFO - START
+2023-06-30 11:10:28,810 ERROR - org.json.JSONArray incompatible with org.json.JSONObject
+java.lang.ClassCastException: org.json.JSONArray incompatible with org.json.JSONObject
+	at Sync.Warehouse_detail(Sync.java:664)
+	at Sync.Warehouse_list(Sync.java:590)
+	at Main.main(Main.java:43)
+2023-06-30 11:25:32,121  INFO - START
+2023-06-30 11:55:51,758  INFO - FINISH
+2023-06-30 12:39:18,908  INFO - START
+2023-06-30 13:11:00,667  INFO - FINISH
